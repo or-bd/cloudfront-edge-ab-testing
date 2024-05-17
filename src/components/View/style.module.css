@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 700px;
+    max-width: 97%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.demoContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+}
+
+@media (max-width: 800px) {
+    .demoContainer {
+        justify-content: center;
+    }
+}
