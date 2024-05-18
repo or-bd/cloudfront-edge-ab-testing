@@ -41,7 +41,7 @@ export class Cloudfront extends Construct {
 
         this.distribution.addBehavior('/testing.js', origin, {
             compress: true,
-            cachePolicy: cf.CachePolicy.CACHING_OPTIMIZED,
+            cachePolicy: cf.CachePolicy.CACHING_DISABLED,
             viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
             functionAssociations: [{
                 function: this.createEdgeFunction(),
