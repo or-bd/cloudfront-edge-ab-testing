@@ -53,9 +53,12 @@ export class Cloudfront extends Construct {
     }
 
     public createKeyValueStore() {
+        const comment = `${this.id}-store`;
+
         return new cf.KeyValueStore(this, `${this.id}-key-value-store`, {
-            comment: `${this.id}-store`,
+            keyValueStoreName: `${comment}-${new Date().getTime()}`,
             source: cf.ImportSource.fromAsset('./lib/cloudfront/store.json'),
+            comment,
         });
     }
 
