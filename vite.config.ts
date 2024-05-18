@@ -6,14 +6,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './index.html',
-        'versions/stable': './src/stable.tsx',
-        'versions/a': './src/a.tsx',
-        'versions/b': './src/b.tsx',
+        'index.js': './index.html',
+        'versions/stable.js': './src/testing/stable.ts',
+        'versions/canary/a.js': './src/testing/a.ts',
+        'versions/canary/b.js': './src/testing/b.ts',
       },
       output: [
         {
-          entryFileNames: '[name].js',
+          entryFileNames: '[name]',
         },
       ]
     }

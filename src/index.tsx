@@ -21,15 +21,16 @@ const appRender = () => {
 
 // @ts-expect-error vitejs global mode env variable
 if (import.meta.env.DEV) {
-  import('./sdk/stable').then(() => {
+  import('./testing/stable.ts').then(() => {
     updateTesting(window.testing as Testing);
     appRender();
   });
 } else {
   const [head] = document.getElementsByTagName('head');
   const script = document.createElement('script');
-  script.src = '/sdk.js';
+  script.src = '/testing.js';
+  script.type = 'module';
   head.appendChild(script);
-  appRender();
+  script.onload = appRender;
 }
 

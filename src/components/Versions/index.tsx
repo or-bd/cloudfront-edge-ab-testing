@@ -23,6 +23,9 @@ const Versions = () => {
       <p>
         This is 👆 the (real) KeyValueStore as it configured in cloudfront.
       </p>
+      <p>So why we're seeing here three versions with total percent above 100%? This is because all the canary versions
+        (a, b, c..) are complementary to 100% and the first A/B test is between the stable version and the canary so
+        only if the canary "won" we run another test between them.</p>
     </div>
   );
 };

@@ -1,0 +1,35 @@
+.container {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a {
+    font-size: .8rem;
+}
+
+.container a:link {
+    display: flex;
+    align-items: center;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.container a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.container a:first-child {
+    border-right: 1px solid black;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.container img {
+    width: 20px;
+    height: 20px;
+}
